@@ -1,6 +1,6 @@
 
 
-# **PayNova (PAYN) – ERC-20 Token**
+# **PayNova (PNOVA) – ERC-20 Token**
 
 ![ solidity ](https://img.shields.io/badge/Solidity-0.8.30-black?logo=solidity)
 ![openzeppelin](https://img.shields.io/badge/OpenZeppelin-5.x-blue)
@@ -20,7 +20,7 @@ https://x.com/PayNovaTeam
 ### **Verified Contract – Sourcify**  
 https://repo.sourcify.dev/56/0xeA706e99170E2a0045c80caFA06A2790e2783dd0
 
-### **BscScan – PAYN Token**  
+### **Etherscan – PNOVA Token**  
 https://bscscan.com/token/0xea706e99170e2a0045c80cafa06a2790e2783dd0
 
 ---
@@ -39,7 +39,7 @@ PAYN is a **fixed-supply**, **non-upgradeable**, **zero-fee**, **non-admin** ERC
 |---------|--------|
 | **Name** | PayNova |
 | **Symbol** | PAYN |
-| **Total Supply** | 7,000,000,000 PAYN |
+| **Total Supply** | 5,000,000,000 PAYN |
 | **Decimals** | 18 |
 | **Standard** | ERC-20 |
 | **Minting** | Only at deployment |
@@ -71,41 +71,6 @@ Secure, modern, auditable framework.
 
 ---
 
-## **📄 Smart Contract**
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.30;
-
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
-
-contract PAYN is ERC20, ERC20Burnable, ERC20Permit, ERC20Capped {
-    uint8 private constant _DECIMALS = 18;
-
-    uint256 public constant MAX_SUPPLY = 7_000_000_000 * (10 ** 18);
-
-    constructor()
-        ERC20("PayNova", "PAYN")
-        ERC20Permit("PayNova")
-        ERC20Capped(MAX_SUPPLY)
-    {
-        _mint(msg.sender, MAX_SUPPLY);
-    }
-
-    function decimals() public pure override returns (uint8) {
-        return _DECIMALS;
-    }
-
-    function _update(address from, address to, uint256 value)
-        internal
-        override(ERC20, ERC20Capped)
-    {
-        super._update(from, to, value);
-    }
-}
 ```
 
 ---
