@@ -55,7 +55,7 @@ PAYN is a **fixed-supply**, **non-upgradeable**, **zero-fee**, **non-admin** ERC
 ## **🛠 Features**
 
 ### ✔ Fixed Supply  
-7B PAYN minted at deployment, no further minting possible.
+5B PAYN minted at deployment, no further minting possible.
 
 ### ✔ Burnable  
 Holders can burn their tokens voluntarily.
