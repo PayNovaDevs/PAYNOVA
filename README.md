@@ -84,16 +84,16 @@ npm install
 npm install @openzeppelin/contracts
 ```
 
-### Deploy to BSC
+### Deploy to EVM Chain
 
 ```bash
-npx hardhat run scripts/deploy.js --network bsc
+npx hardhat run scripts/deploy.js --network ethereum
 ```
 
 ### Verify Contract
 
 ```bash
-npx hardhat verify --network bsc <ADDRESS>
+npx hardhat verify --network ethereum <ADDRESS>
 ```
 
 ---
